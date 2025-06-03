@@ -65,3 +65,13 @@ It is required to use the `awscli` to configure the right IAM user (with the rig
 2. `aws configure`
 3. Use your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
 4. Make sure you've got a bucket named `arxiv-ai`
+
+
+## Clean up bucket completely
+
+> [!NOTE]  
+> S3 bucket is currently hardcoded to `arxiv-ai`
+
+```bash
+npm run delete-all
+```
