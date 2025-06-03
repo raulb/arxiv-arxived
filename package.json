@@ -1,0 +1,18 @@
+{
+  "name": "arxiv-arxived",
+  "license": "Apache-2.0",
+  "version": "1.0.0",
+  "description": "Fetch arXiv PDFs and upload to S3",
+  "main": "list-arxiv.js",
+  "scripts": {
+    "list": "node list-arxiv.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "xml2js": "^0.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0"
+  }
+}
