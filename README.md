@@ -37,3 +37,31 @@ Total entries: 200
    PDF URL: http://arxiv.org/pdf/2505.24584v2
 ...
 ```
+
+## Upload PDFs to an S3 bucket
+
+> [!NOTE]  
+> S3 bucket is currently hardcoded to `arxiv-ai`
+
+It is required to use the `awscli` to configure the right IAM user (with the right S3 user policy to upload objects):
+
+```json
+{
+    "Sid": "s3",
+    "Effect": "Allow",
+    "Action": [
+        "s3:*"
+    ],
+    "Resource": [
+        "arn:aws:s3:::arxiv-ai",
+        "arn:aws:s3:::arxiv-ai/*"
+    ]
+}
+```
+
+### Steps
+
+1. `brew install awscli`
+2. `aws configure`
+3. Use your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
+4. Make sure you've got a bucket named `arxiv-ai`
