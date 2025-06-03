@@ -2,11 +2,8 @@
 
 Process AI papers from arxiv
 
-**TODO**
-
 - [x] List PDFs programatically from arXiv
-- [ ] Upload these PDFs to S3 every 24 hours
-
+- [x] Be able to upload to a specific S3 bucket
 
 ## Setup
 
