@@ -6,6 +6,8 @@
   "main": "list-arxiv.js",
   "scripts": {
     "list": "node list-arxiv.js",
+    "upload": "node upload-arxiv-pdfs.js",
+    "delete-all": "node delete-arxiv-pdfs.js",
     "test": "echo \"No tests specified\" && exit 0"
   },
   "dependencies": {
