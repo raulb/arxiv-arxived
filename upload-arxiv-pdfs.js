@@ -11,7 +11,7 @@ async function fetchAndUploadArxivPdfs() {
     console.log('Fetching data from arXiv API...\n');
     
     const entries = await fetchArxivEntries({
-      maxResults: 5,
+      maxResults: 200,
       sortBy: 'lastUpdatedDate',
       sortOrder: 'descending',
       filterLast24Hours: false
