@@ -6,12 +6,16 @@ const { fetchArxivEntries } = require('./list-arxiv');
 const s3Client = new S3Client({ region: process.env.AWS_REGION || 'us-east-1' });
 const BUCKET_NAME = 'arxiv-ai'; 
 
+// Parse command-line argument for max number of documents
+const argMax = process.argv[2];
+const maxResults = argMax && !isNaN(Number(argMax)) ? Number(argMax) : 200;
+
 async function fetchAndUploadArxivPdfs() {
   try {
     console.log('Fetching data from arXiv API...\n');
     
     const entries = await fetchArxivEntries({
-      maxResults: 200,
+      maxResults: maxResults,
       sortBy: 'lastUpdatedDate',
       sortOrder: 'descending',
       filterLast24Hours: false
